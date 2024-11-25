@@ -1,0 +1,76 @@
+/* -------------------  MOBILE  --------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* -------------------  TABLET  --------------------- */
+@media (min-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  header, footer {
+    flex: 0 100%;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px;
+  }
+}
+
+/* -------------------  DESKTOP  -------------------- */
+@media (min-width: 1224px) {
+  body {
+    flex-direction: column;
+  }
+
+  header, footer {
+    flex: 0 100%;
+  }
+
+  main {
+    flex: 1;
+    padding: 60px;
+  }
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+@media (min-width: 1824px) {
+  body {
+    flex-direction: column;
+  }
+
+  header, footer {
+    flex: 0 100%;
+  }
+
+  main {
+    flex: 1;
+    padding: 80px;
+  }
+}
