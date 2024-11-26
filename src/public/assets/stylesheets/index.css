@@ -1,76 +1,199 @@
-/* -------------------  MOBILE  --------------------- */
-
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 1em 0;
   text-align: center;
 }
 
+header h1 {
+  font-size: 2em;
+}
+
+/* Main Layout */
 main {
-  flex: 1;
-  padding: 20px;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+h2 {
+  color: #444;
+  margin-bottom: 1em;
   text-align: center;
 }
 
-/* -------------------  TABLET  --------------------- */
-@media (min-width: 768px) {
-  body {
-    flex-direction: column;
-  }
+h3 {
+  color: #555;
+  text-align: center;
+  margin-bottom: 1em;
+}
 
-  header, footer {
-    flex: 0 100%;
-  }
+/* Sections */
+section {
+  background: #fff;
+  justify-items: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Astronomy Picture of the Day */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* margin-bottom: 1em; */
+  justify-self: center;
+  margin: auto;
+}
+
+/* Rover Photos */
+.rover-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: row;
+  margin: 1em 0;
+}
+
+.rover-photos img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Rover Selector */
+#rover-select {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+button {
+  display: block;
+  margin: 1em auto;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  color: #fff;
+  background-color: #0078d7;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Mars Weather */
+.mars-weather div {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+/* Near Earth Objects */
+.neo-info div {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 1em 0;
+  margin-top: 2em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
   main {
-    flex: 1;
-    padding: 40px;
+    padding: 1.5em;
   }
 }
 
-/* -------------------  DESKTOP  -------------------- */
-@media (min-width: 1224px) {
-  body {
-    flex-direction: column;
-  }
-
-  header, footer {
-    flex: 0 100%;
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 1.75em;
   }
 
   main {
-    flex: 1;
-    padding: 60px;
+    padding: 1em;
+  }
+
+  .rover-photos img {
+    width: 180px;
   }
 }
 
-/* -------------------  LARGE SCREENS  -------------- */
-@media (min-width: 1824px) {
-  body {
-    flex-direction: column;
-  }
-
-  header, footer {
-    flex: 0 100%;
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
   }
 
   main {
-    flex: 1;
-    padding: 80px;
+    padding: 0.75em;
+  }
+
+  .rover-photos img {
+    width: 150px;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.25em;
+  }
+
+  main {
+    padding: 0.5em;
+  }
+
+  .rover-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rover-photos img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  button {
+    padding: 0.5em;
+    font-size: 0.8em;
   }
 }
